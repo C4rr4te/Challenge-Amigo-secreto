@@ -11,7 +11,9 @@ function agregarAmigo() {
 
         console.log(amigos);
         }
+        enlistarAmigos();
         limpiarCaja();
+
         return;
 }
 
@@ -19,5 +21,16 @@ function limpiarCaja(){
     let valorCaja = document.querySelector('#amigo');
     valorCaja.value = '';
     return;
+}
+// Se crea función para mostrar en pantalla los nombres de los amigos que se van ingresando
+function enlistarAmigos(){
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = '';
+
+    for (let i = 0; i < amigos.length; i++){
+        let item = document.createElement('li');
+        item.textContent = amigos[i];
+        listaAmigos.appendChild(item);
+    }
 }
 
