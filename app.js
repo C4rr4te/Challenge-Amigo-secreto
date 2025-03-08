@@ -34,3 +34,19 @@ function enlistarAmigos(){
     }
 }
 
+function sortearAmigos(){
+    if(amigos.length === 0){
+        alert('No existen datos de amigos para sortear');
+    }
+
+    let amigoElegido = amigos[Math.floor(Math.random()*amigos.length)];
+    let resultado = document.getElementById('resultado');
+
+    if (resultado = ''){
+        resultado.innerHTML = ''
+    } else{
+    resultado.innerHTML = `Tu amigo secreto es: ${amigoElegido}`;
+    }
+
+}
+
